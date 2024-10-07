@@ -2,3 +2,47 @@ type: itemTurret
 name: Duo2
 description: the cooler duo
 size: 1
+category: turret
+health: 100
+research: duo
+reload: 15
+rotateSpeed: 1.5
+shootCone:30
+range: 15
+recoil: 1
+capacity: 30
+liquidCapacity: 10
+ammoPerShot: 1
+targetsAir: true
+targetsGround: true
+
+
+ammoTypes: {
+    copper: {
+      type: BasicBulletType
+      speed: 7
+      damage: 10
+      width: 5
+      height: 7
+      ammoMultiplier: 2
+      inaccuracy: 2
+      lifetime: 120
+}
+}
+
+coolant: {
+  type: consumeLiquid
+  liquid: water
+  amount: 6
+  liquidBoostIntensity: 1.2
+  optional: true
+  booster: true
+
+  type:consumeLiquid
+  liquid: cryofluid
+  liquidBoostIntensity: 2
+  optional: true
+  booster: true
+}
+
+requirements: [copper/30, graphite/5]
