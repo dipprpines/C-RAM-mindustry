@@ -1,0 +1,8 @@
+name: "cram-r"
+displayName: "CRAM-R"
+author: "FyreFox"
+description: "Why use many bullet when single bullet do trick?"
+version "0.1a"
+minGameVersion: "146"
+dependencies: []
+hidden: false
