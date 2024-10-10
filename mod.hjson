@@ -5,5 +5,5 @@ author: "FyreFox"
 description: "Why use many bullet when single bullet do trick?"
 version "0.1a"
 minGameVersion: "146"
-dependencies: []
+dependencies: [ ]
 hidden: false
