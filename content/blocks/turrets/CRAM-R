@@ -1,1 +1,65 @@
+type: itemTurret
+name: CRAM-R
+description: Compresses huge payloads into massive artillery shells. Slow reload, but offers excellent ammunition variety.
+size: 6
+category: turret
+health: 7000
+research: ripple
+reload: 200
+rotateSpeed: 1
+inaccuracy = 2
+shootCone: 2
+range: 480
+recoil: 6
+capacity: 30
+liquidCapacity: 128
+ammoPerShot: 15
+targetsAir: false
+targetsGround: true
+shake: 5
+shootSound: artillery
+speed: 5
+minRange: 50
 
+ammoTypes: {
+    copper: {
+      type: artilleryBulletType
+	  hitEffect: fx.blastExplosion
+      width: 18
+      height: 18
+      ammoMultiplier: 1
+      lifetime: 96
+	  collidesTiles: false
+	  splashDamageRadius: 96 * 0.5;
+      splashDamage: 300;
+}
+	lead: {
+      type: artilleryBulletType
+	  hitEffect: fx.blastExplosion
+      width: 18
+      height: 18
+      ammoMultiplier: 1
+      lifetime: 96
+	  collidesTiles: false
+	  splashDamageRadius: 40 * 0.5;
+      splashDamage: 400;
+}
+}
+
+coolant: {
+  type: consumeLiquid
+  liquid: water
+  amount: 60
+  liquidBoostIntensity: 1.2
+  optional: true
+  booster: true
+
+  type:consumeLiquid
+  liquid: cryofluid
+  amount: 48
+  liquidBoostIntensity: 1.8
+  optional: true
+  booster: true
+}
+
+requirements: [copper/30, graphite/5]
